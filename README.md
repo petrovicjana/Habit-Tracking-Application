@@ -23,6 +23,11 @@ The purpose of this application is for users to achieve their goals by tracking 
 - `pickle` module (part of the standard library)
 - `datetime` module (part of the standard library)
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
 ## Installation
 
 To install and run this project, follow these steps:
