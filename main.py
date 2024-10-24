@@ -105,6 +105,7 @@ Enter 13 if you want to exit
             # User chooses habit from the list and edits details
             habit_to_edit = choose_habit_from_the_list(list_of_habits)
             edit_habit_details(habit=habit_to_edit)
+            print("Habit updated successfully!")
 
         elif user_choice == "7":
             for habit in list_of_habits:
@@ -118,8 +119,9 @@ Enter 13 if you want to exit
             get_habit_with_longest_streak(list_of_habits)
 
         elif user_choice == "9":
-            # Getting the streaks of all habits from a list, but since we have 4 weeks pre-defined list
-            # the longest streak we can get is one because only last day is marked as true
+            # Getting the streaks of all habits from a list, but since we have 4 weeks pre-defined list of habits,
+            # the longest streak we can get is one because only last day is marked as true and if first completion
+            # status is False, habit is considered broken
             get_streaks_of_all_habits(list_of_habits)
 
         elif user_choice == "10":

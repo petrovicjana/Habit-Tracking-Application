@@ -121,7 +121,7 @@ class Habit:
             if completed:
                 current_streak += 1
             else:
-                longest_streak = max(longest_streak, current_streak)
+                longest_streak = max(longest_streak, current_streak)  # If not completed, return longest streak until now
                 current_streak = 0
 
         # Update longest streak

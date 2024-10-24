@@ -53,7 +53,7 @@ class TestHabit(unittest.TestCase):
     def test_broken_habit(self):
         """
         Simulate a broken habit by setting a missed status (False)
-        and verifying if the habit is considered broken
+        and verify if the habit is considered broken
         """
         update_date = datetime.now().date()
         self.daily_habit.update_status(update_date, False)
