@@ -6,7 +6,6 @@ from habit import Habit
 def save_data(filename: str, habits: List[Habit]):
     """
     Saving Habit objects using pickle serialization
-
     :param filename: The name of the file to save the data to
     :param habits: A list of habits to be saved
     """
@@ -20,7 +19,6 @@ def save_data(filename: str, habits: List[Habit]):
 def load_data(filename: str):
     """
     Load habits from a file using pickle deserialization
-
     :param filename: The name of the file to load data from
     :return: List of habit objects loaded from the file
     """

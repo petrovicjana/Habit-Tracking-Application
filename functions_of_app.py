@@ -38,7 +38,7 @@ def create_new_habit():
 
 
 def check_off_habit(habit: Habit):
-    """User marks habit as completed by choosing habit from the list of Habit objects"""
+    """Mark habit as completed by choosing habit from the list of Habit objects"""
     completion_date = datetime.now()
     habit.update_status(completion_date, True)  # Updating habit date and habit status
     print("Habit marked as completed!")
