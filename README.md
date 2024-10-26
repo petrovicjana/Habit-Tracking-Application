@@ -33,7 +33,7 @@ The purpose of this application is for users to achieve their goals by tracking 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
-## Installation and usage
+## Installation
 
 To install and run this project, follow these steps:
 
