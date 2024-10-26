@@ -84,7 +84,7 @@ Enter 14 if you want to exit
 
         elif user_choice == "2":
             chosen_habit = choose_habit_from_the_list(list_of_habits)
-            mark_habit_uncompleted(chosen_habit)
+            mark_habit_broken(chosen_habit)
 
         elif user_choice == "3":
             # User accesses the list of all habits

@@ -44,7 +44,7 @@ def check_off_habit(habit: Habit):
     print("Habit marked as completed!")
 
 
-def mark_habit_uncompleted(habit: Habit):
+def mark_habit_broken(habit: Habit):
     """Manually mark a habit as uncompleted."""
     uncompleted_date = datetime.now()
     habit.update_status(uncompleted_date, False)  # Updating habit date and habit status
