@@ -62,18 +62,19 @@ while True:
         user_choice = input("""
 
 Enter 1 to mark the habit completed
-Enter 2 to view the list of all habits
-Enter 3 to choose one habit from the list
-Enter 4 to create new habit
-Enter 5 to delete existing habit
-Enter 6 to edit habit details
-Enter 7 to check for broken habits
-Enter 8 to get longest streak from the list
-Enter 9 to get longest streaks of all habits
-Enter 10 to see habits with same periodicity
-Enter 11 if you want to save information
-Enter 12 if you want to load information
-Enter 13 if you want to exit
+Enter 2 to break the habit 
+Enter 3 to view the list of all habits
+Enter 4 to choose one habit from the list
+Enter 5 to create new habit
+Enter 6 to delete existing habit
+Enter 7 to edit habit details
+Enter 8 to check for broken habits
+Enter 9 to get longest streak from the list
+Enter 10 to get longest streaks of all habits
+Enter 11 to see habits with same periodicity
+Enter 12 if you want to save information
+Enter 13 if you want to load information
+Enter 14 if you want to exit
 
 """)
         if user_choice == "1":
@@ -82,55 +83,59 @@ Enter 13 if you want to exit
             check_off_habit(chosen_habit)
 
         elif user_choice == "2":
+            chosen_habit = choose_habit_from_the_list(list_of_habits)
+            mark_habit_uncompleted(chosen_habit)
+
+        elif user_choice == "3":
             # User accesses the list of all habits
             print_list_of_habits(list_of_habits)
 
-        elif user_choice == "3":
+        elif user_choice == "4":
             chosen_habit_from_list = choose_habit_from_the_list(list_of_habits)
             print(chosen_habit_from_list)
 
-        elif user_choice == "4":
+        elif user_choice == "5":
             # User creates new habit and appends it to the list
             new_habit = create_new_habit()
             list_of_habits.append(new_habit)
             print("New habit added to the tracking list!")
 
-        elif user_choice == "5":
+        elif user_choice == "6":
             # User chooses index of a habit and removes it
             habit_to_delete = choose_habit_from_the_list(list_of_habits)
             list_of_habits.remove(habit_to_delete)
             print("Habit deleted successfully!")
 
-        elif user_choice == "6":
+        elif user_choice == "7":
             # User chooses habit from the list and edits details
             habit_to_edit = choose_habit_from_the_list(list_of_habits)
             edit_habit_details(habit=habit_to_edit)
             print("Habit updated successfully!")
 
-        elif user_choice == "7":
+        elif user_choice == "8":
             for habit in list_of_habits:
                 if habit.check_broken_habit():
                     print(f"The habit '{habit.habit_name}' is broken.")
                 else:
                     print(f"The habit '{habit.habit_name}' is still active.")
 
-        elif user_choice == "8":
+        elif user_choice == "9":
             # Getting the habit with the longest streak
             get_habit_with_longest_streak(list_of_habits)
 
-        elif user_choice == "9":
+        elif user_choice == "10":
             # Getting the streaks of all habits from a list, but since we have 4 weeks pre-defined list of habits,
             # the longest streak we can get is one because only last day is marked as true and if first completion
             # status is False, habit is considered broken
             get_streaks_of_all_habits(list_of_habits)
 
-        elif user_choice == "10":
+        elif user_choice == "11":
             show_habits_with_same_periodicity(list_of_habits)
 
-        elif user_choice == "11":
+        elif user_choice == "12":
             save_data(filename=get_file_name(), habits=list_of_habits)
 
-        elif user_choice == "12":
+        elif user_choice == "13":
             habits_list = load_data(filename=get_file_name())
 
         else:

@@ -44,6 +44,13 @@ def check_off_habit(habit: Habit):
     print("Habit marked as completed!")
 
 
+def mark_habit_uncompleted(habit: Habit):
+    """Manually mark a habit as uncompleted."""
+    uncompleted_date = datetime.now()
+    habit.update_status(uncompleted_date, False)  # Updating habit date and habit status
+    print("Habit marked as uncompleted!")
+
+
 def choose_habit_from_the_list(list_of_habits: List[Habit]):
     """User chooses habit from the list by entering its index"""
     chosen_habit_index = input("Choose the index of a habit")
